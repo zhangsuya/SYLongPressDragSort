@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE3352B71EC590A7008189F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3352B61EC590A7008189F0 /* main.m */; };
+		FE3352BA1EC590A7008189F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3352B91EC590A7008189F0 /* AppDelegate.m */; };
+		FE3352BD1EC590A7008189F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3352BC1EC590A7008189F0 /* ViewController.m */; };
+		FE3352C01EC590A7008189F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3352BE1EC590A7008189F0 /* Main.storyboard */; };
+		FE3352C21EC590A7008189F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3352C11EC590A7008189F0 /* Assets.xcassets */; };
+		FE3352C51EC590A7008189F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3352C31EC590A7008189F0 /* LaunchScreen.storyboard */; };
+		FE3352D01EC590A8008189F0 /* SYLongPressDragSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3352CF1EC590A8008189F0 /* SYLongPressDragSortTests.m */; };
+		FE3352DB1EC590A8008189F0 /* SYLongPressDragSortUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3352DA1EC590A8008189F0 /* SYLongPressDragSortUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE3352CC1EC590A8008189F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE3352AA1EC590A7008189F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE3352B11EC590A7008189F0;
+			remoteInfo = SYLongPressDragSort;
+		};
+		FE3352D71EC590A8008189F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE3352AA1EC590A7008189F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE3352B11EC590A7008189F0;
+			remoteInfo = SYLongPressDragSort;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE3352B21EC590A7008189F0 /* SYLongPressDragSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLongPressDragSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3352B61EC590A7008189F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE3352B81EC590A7008189F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE3352B91EC590A7008189F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE3352BB1EC590A7008189F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE3352BC1EC590A7008189F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE3352BF1EC590A7008189F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE3352C11EC590A7008189F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE3352C41EC590A7008189F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE3352C61EC590A7008189F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3352CB1EC590A8008189F0 /* SYLongPressDragSortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYLongPressDragSortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3352CF1EC590A8008189F0 /* SYLongPressDragSortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYLongPressDragSortTests.m; sourceTree = "<group>"; };
+		FE3352D11EC590A8008189F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3352D61EC590A8008189F0 /* SYLongPressDragSortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYLongPressDragSortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3352DA1EC590A8008189F0 /* SYLongPressDragSortUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYLongPressDragSortUITests.m; sourceTree = "<group>"; };
+		FE3352DC1EC590A8008189F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE3352AF1EC590A7008189F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352C81EC590A8008189F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352D31EC590A8008189F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE3352A91EC590A7008189F0 = {
+			isa = PBXGroup;
+			children = (
+				FE3352B41EC590A7008189F0 /* SYLongPressDragSort */,
+				FE3352CE1EC590A8008189F0 /* SYLongPressDragSortTests */,
+				FE3352D91EC590A8008189F0 /* SYLongPressDragSortUITests */,
+				FE3352B31EC590A7008189F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE3352B31EC590A7008189F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE3352B21EC590A7008189F0 /* SYLongPressDragSort.app */,
+				FE3352CB1EC590A8008189F0 /* SYLongPressDragSortTests.xctest */,
+				FE3352D61EC590A8008189F0 /* SYLongPressDragSortUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE3352B41EC590A7008189F0 /* SYLongPressDragSort */ = {
+			isa = PBXGroup;
+			children = (
+				FE3352B81EC590A7008189F0 /* AppDelegate.h */,
+				FE3352B91EC590A7008189F0 /* AppDelegate.m */,
+				FE3352BB1EC590A7008189F0 /* ViewController.h */,
+				FE3352BC1EC590A7008189F0 /* ViewController.m */,
+				FE3352BE1EC590A7008189F0 /* Main.storyboard */,
+				FE3352C11EC590A7008189F0 /* Assets.xcassets */,
+				FE3352C31EC590A7008189F0 /* LaunchScreen.storyboard */,
+				FE3352C61EC590A7008189F0 /* Info.plist */,
+				FE3352B51EC590A7008189F0 /* Supporting Files */,
+			);
+			path = SYLongPressDragSort;
+			sourceTree = "<group>";
+		};
+		FE3352B51EC590A7008189F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3352B61EC590A7008189F0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE3352CE1EC590A8008189F0 /* SYLongPressDragSortTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE3352CF1EC590A8008189F0 /* SYLongPressDragSortTests.m */,
+				FE3352D11EC590A8008189F0 /* Info.plist */,
+			);
+			path = SYLongPressDragSortTests;
+			sourceTree = "<group>";
+		};
+		FE3352D91EC590A8008189F0 /* SYLongPressDragSortUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE3352DA1EC590A8008189F0 /* SYLongPressDragSortUITests.m */,
+				FE3352DC1EC590A8008189F0 /* Info.plist */,
+			);
+			path = SYLongPressDragSortUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE3352B11EC590A7008189F0 /* SYLongPressDragSort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3352DF1EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSort" */;
+			buildPhases = (
+				FE3352AE1EC590A7008189F0 /* Sources */,
+				FE3352AF1EC590A7008189F0 /* Frameworks */,
+				FE3352B01EC590A7008189F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SYLongPressDragSort;
+			productName = SYLongPressDragSort;
+			productReference = FE3352B21EC590A7008189F0 /* SYLongPressDragSort.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE3352CA1EC590A8008189F0 /* SYLongPressDragSortTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3352E21EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSortTests" */;
+			buildPhases = (
+				FE3352C71EC590A8008189F0 /* Sources */,
+				FE3352C81EC590A8008189F0 /* Frameworks */,
+				FE3352C91EC590A8008189F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE3352CD1EC590A8008189F0 /* PBXTargetDependency */,
+			);
+			name = SYLongPressDragSortTests;
+			productName = SYLongPressDragSortTests;
+			productReference = FE3352CB1EC590A8008189F0 /* SYLongPressDragSortTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE3352D51EC590A8008189F0 /* SYLongPressDragSortUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3352E51EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSortUITests" */;
+			buildPhases = (
+				FE3352D21EC590A8008189F0 /* Sources */,
+				FE3352D31EC590A8008189F0 /* Frameworks */,
+				FE3352D41EC590A8008189F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE3352D81EC590A8008189F0 /* PBXTargetDependency */,
+			);
+			name = SYLongPressDragSortUITests;
+			productName = SYLongPressDragSortUITests;
+			productReference = FE3352D61EC590A8008189F0 /* SYLongPressDragSortUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE3352AA1EC590A7008189F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "张苏亚";
+				TargetAttributes = {
+					FE3352B11EC590A7008189F0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V94GBZ6B8Y;
+						ProvisioningStyle = Automatic;
+					};
+					FE3352CA1EC590A8008189F0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V94GBZ6B8Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FE3352B11EC590A7008189F0;
+					};
+					FE3352D51EC590A8008189F0 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = V94GBZ6B8Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FE3352B11EC590A7008189F0;
+					};
+				};
+			};
+			buildConfigurationList = FE3352AD1EC590A7008189F0 /* Build configuration list for PBXProject "SYLongPressDragSort" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE3352A91EC590A7008189F0;
+			productRefGroup = FE3352B31EC590A7008189F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE3352B11EC590A7008189F0 /* SYLongPressDragSort */,
+				FE3352CA1EC590A8008189F0 /* SYLongPressDragSortTests */,
+				FE3352D51EC590A8008189F0 /* SYLongPressDragSortUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE3352B01EC590A7008189F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3352C51EC590A7008189F0 /* LaunchScreen.storyboard in Resources */,
+				FE3352C21EC590A7008189F0 /* Assets.xcassets in Resources */,
+				FE3352C01EC590A7008189F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352C91EC590A8008189F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352D41EC590A8008189F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE3352AE1EC590A7008189F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3352BD1EC590A7008189F0 /* ViewController.m in Sources */,
+				FE3352BA1EC590A7008189F0 /* AppDelegate.m in Sources */,
+				FE3352B71EC590A7008189F0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352C71EC590A8008189F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3352D01EC590A8008189F0 /* SYLongPressDragSortTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3352D21EC590A8008189F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3352DB1EC590A8008189F0 /* SYLongPressDragSortUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE3352CD1EC590A8008189F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE3352B11EC590A7008189F0 /* SYLongPressDragSort */;
+			targetProxy = FE3352CC1EC590A8008189F0 /* PBXContainerItemProxy */;
+		};
+		FE3352D81EC590A8008189F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE3352B11EC590A7008189F0 /* SYLongPressDragSort */;
+			targetProxy = FE3352D71EC590A8008189F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE3352BE1EC590A7008189F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3352BF1EC590A7008189F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE3352C31EC590A7008189F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3352C41EC590A7008189F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE3352DD1EC590A8008189F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE3352DE1EC590A8008189F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE3352E01EC590A8008189F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSort/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE3352E11EC590A8008189F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSort/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSort;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE3352E31EC590A8008189F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SYLongPressDragSort.app/SYLongPressDragSort";
+			};
+			name = Debug;
+		};
+		FE3352E41EC590A8008189F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSortTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSortTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SYLongPressDragSort.app/SYLongPressDragSort";
+			};
+			name = Release;
+		};
+		FE3352E61EC590A8008189F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSortUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SYLongPressDragSort;
+			};
+			name = Debug;
+		};
+		FE3352E71EC590A8008189F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = V94GBZ6B8Y;
+				INFOPLIST_FILE = SYLongPressDragSortUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suya..SYLongPressDragSortUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SYLongPressDragSort;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE3352AD1EC590A7008189F0 /* Build configuration list for PBXProject "SYLongPressDragSort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3352DD1EC590A8008189F0 /* Debug */,
+				FE3352DE1EC590A8008189F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE3352DF1EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3352E01EC590A8008189F0 /* Debug */,
+				FE3352E11EC590A8008189F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE3352E21EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSortTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3352E31EC590A8008189F0 /* Debug */,
+				FE3352E41EC590A8008189F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE3352E51EC590A8008189F0 /* Build configuration list for PBXNativeTarget "SYLongPressDragSortUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3352E61EC590A8008189F0 /* Debug */,
+				FE3352E71EC590A8008189F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE3352AA1EC590A7008189F0 /* Project object */;
+}
