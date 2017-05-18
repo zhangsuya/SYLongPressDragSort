@@ -1,0 +1,61 @@
+//
+//  SYLongPressDragSort-Prefix.pch
+//  SYLongPressDragSort
+//
+//  Created by 张苏亚 on 17/5/17.
+//  Copyright © 2017年 张苏亚. All rights reserved.
+//
+
+#ifndef SYLongPressDragSort_Prefix_pch
+#define SYLongPressDragSort_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+//#import <FNNetworking.h>
+//#import <BFKit.h>
+#import <Masonry.h>
+#import "NSValueTransformer+MTLPredefinedTransformerAdditions.h"
+#import "SYLMacros.h"
+#import "UIColor+Hex.h"
+#import "NSMutableArray+Add.h"
+//#import "UIColor+FNColor.h"
+//#import <FNKit.h>
+//#import "FNEnvironmentHeader.h"
+//#import "FNTabBar.h"
+
+
+#endif
+
+#ifdef DEBUG
+#define DLog(...) NSLog(__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+//** #define FNDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+//** #define IS_iPad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+//** #define kColorWithRGB(r, g, b) [UIColor colorWithRed:(r) / 255.f green:(g) / 255.f blue:(b) / 255.f alpha:1.f]
+#define kScreenWidth CGRectGetWidth([UIScreen mainScreen].bounds)
+#define kScreenHeight CGRectGetHeight([UIScreen mainScreen].bounds)
+
+// 单例
+#undef	AS_SINGLETON
+#define AS_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+
+
+#endif /* SYLongPressDragSort_Prefix_pch */
