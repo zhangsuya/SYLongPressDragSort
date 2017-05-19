@@ -242,22 +242,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         longPress.minimumPressDuration = 1.1;
         [_mainView addGestureRecognizer:longPress];
         
-//        DLog(@"ges%@",_mainView.gestureRecognizers);
-//        for (UIGestureRecognizer *gesture in _mainView.gestureRecognizers) {
-//            if ([NSStringFromClass(gesture.class) containsString:@"UIScrollViewPanGestureRecognizer"]) {
-////                gesture.cancelsTouchesInView = NO;
-//                [gesture requireGestureRecognizerToFail:longPress];
-//            }
-//        }
-//        WS(weakSelf);
-//        FNMerchantRefreshHeader *header = [FNMerchantRefreshHeader headerWithRefreshingBlock:^{
-//            [weakSelf initRequest];
-//        }];
-//        
-//        [header.lastUpdatedTimeLabel setFont:[UIFont systemFontOfSize:10]];
-//
-//        _mainView.mj_header = header;
-        
 
     }
     return _mainView;
@@ -272,14 +256,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         _scrollView = scrollView;
         _scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight -90 -tabbarHeight + 1);
         _scrollView.showsVerticalScrollIndicator = NO;
-//        WS(weakSelf);
-//        FNMerchantRefreshHeader *header = [FNMerchantRefreshHeader headerWithRefreshingBlock:^{
-//            [weakSelf initRequest];
-//        }];
-//        
-//        [header.lastUpdatedTimeLabel setFont:[UIFont systemFontOfSize:10]];
-//
-//        _scrollView.mj_header = header;
+
     }
     return _scrollView;
 }
@@ -287,36 +264,14 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 -(void)useCache
 {
 
-//    if([[FNAppInfo shareAppInfo] isLogin] &&[[FNNetworkCache defaultCache].yyCache containsObjectForKey:[NSString stringWithFormat:@"%@%@",[FNEnvironmentConfigure URLStringForPath:kGetHomePage],[[[FNAppInfo shareAppInfo] userInfo] mid]]])
-//    {
-//        //        [_mainView reloadData];
-//        
-//        id responseObject = [[FNNetworkCache defaultCache].yyCache objectForKey:[NSString stringWithFormat:@"%@%@",[FNEnvironmentConfigure URLStringForPath:kGetHomePage],[[[FNAppInfo shareAppInfo] userInfo] mid]]];
-//        
-//        
-//        FNHomeInfoModel *responseModel = [MTLJSONAdapter modelOfClass:[FNHomeInfoModel class] fromJSONDictionary:responseObject error:nil];
-//        
-//        self.homeVM.biInfoArray = [responseModel.bi.dataList mutableCopy];
-//        self.homeVM.dsrInfoArray = [responseModel.dsr.dataList mutableCopy];
-//        self.homeVM.modelInfoArray = [responseModel.manage.dataList mutableCopy];
-//        self.homeVM.store = responseModel.store;
-//        [self.homeVM calculateLayoutInfo];
-//        
-//        [_mainView reloadData];
-//        
-//        [self addLineToSuperView:self.mainView withArray:self.homeVM.biInfoArray];
-//        
-//    }
 
 }
 -(void)setUpNotification
 {
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTabBarRequest) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(biSettingVisibleChange:) name:FNBiSettingVisibleChange object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelSettingVisibleChange:) name:FNManagementSettingVisibleChange object:nil];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:kLogoutNotification object:nil];
 }
 
 -(void)logout:(NSNotification *)notify
@@ -330,14 +285,10 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 -(void)biSettingVisibleChange:(NSNotification *)notify
 {
 
-//    [_mainView.mj_header beginRefreshing];
 }
 
 -(void)modelSettingVisibleChange:(NSNotification *)notify
 {
-    //有网络接口时，直接从新请求数据，并reloadSections即可。
-    
-//    [_mainView.mj_header beginRefreshing];
     
 }
 
@@ -372,13 +323,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 
             
             if (weakSelf.homeVM.biInfoArray.count ==0 &&weakSelf.homeVM.dsrInfoArray.count ==0 &&weakSelf.homeVM.modelInfoArray.count ==0) {
-//                [weakSelf stopProgress];
-//                weakSelf.mainView.fheight =  weakSelf.mainView.fheight ;
-//                
-//                [weakSelf fn_setEmptyViewScrollEnable:YES];
-//
-//                [weakSelf fn_addDefaultEmptyDataSetWithTarget:weakSelf.scrollView  title:@"暂时没有数据" ];
-//                [weakSelf fn_setVerticalOffsetForEmptyDataSet:-50];
+
             }else
             {
                 weakSelf.scrollView.hidden = YES;
@@ -388,21 +333,11 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
                 [weakSelf.mainView reloadData];
                 [weakSelf addLineToSuperView:weakSelf.mainView withArray:weakSelf.homeVM.biInfoArray];
                 
-
-//                [weakSelf stopProgress];
-
             }
             
             
         });
-        
-   //         //当layout比较复杂时，这个方法会很耗时间。在主线程中处理可能会引起阻塞。
-//         //         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//         
-//         
-//         dispatch_async(dispatch_get_main_queue(), ^{
-//             [weakSelf.homeVM layout];
-//
+    
 }
 
 
@@ -416,13 +351,11 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     
     self.homeVM = [[FNHomeViewModel alloc] init];
 
-//    self.view.backgroundColor = [UIColor fn_color:FNColor_background_color];
     [self.view addSubview:self.mainView];
     [self.view addSubview:self.scrollView];
     [self.view bringSubviewToFront:self.scrollView];
     
     _mainViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelTap)];
-//    _mainViewTap.cancelsTouchesInView = NO;
     _mainViewTap.delegate = self;
     [self.mainView addGestureRecognizer:_mainViewTap];
 }
@@ -645,7 +578,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
             permissionInfoModel.code = biModel.code;
             permissionInfoModel.name = biModel.name;
             
-//            [self startProgressType:MBProgressHUDModeIndeterminate toView:self.view dimBackground:NO];
 
         
                     FNHomeNoPermissionViewController *noPermissionVC = [[FNHomeNoPermissionViewController alloc] init];
@@ -987,7 +919,81 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 }
 
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //如果当前有长按选中的item，则把长按选中的item设为nil，并且不跳转
+    if (self.selectedBiInfoCell) {
+        [self.selectedBiInfoCell setHidenIcon:YES];
+        self.selectedBiInfoCell = nil;
+        self.selectedIndexPath = nil;
+        self.finalToIndexPath = nil;
+        return;
+    }
+    //如果一个item被点击了，（在这个item跳转之前）不能同时点击第二个。
+    if (self.didSelectedIndexPath) {
+        //        self.didSelectedIndexPath = nil;
+        return;
+    }
+    
+    if (indexPath.section ==0) {
+        
+        
+        if (indexPath.item == [self.homeVM.biInfoArray count]) {
+            
+            self.didSelectedIndexPath = indexPath;
+            
+            FNHomeSettingViewController *homeSettingVC = [[FNHomeSettingViewController alloc] initWithViewControllerStyle:FNHomeSettingViewControllerStyleBi];
+            homeSettingVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:homeSettingVC animated:YES];
+            //            self.didSelectedIndexPath = nil;
+            
+        }else
+        {
+            
+        }
+        
+    }else if (indexPath.section ==2)
+    {
+        self.didSelectedIndexPath = indexPath;
+        FNStoreManagementInfoCollectionViewCell *biModelInfoCell =(FNStoreManagementInfoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        
+        biModelInfoCell.userInteractionEnabled = NO;
+        
+        __weak typeof(FNStoreManagementInfoCollectionViewCell *) weakBiModelInfoCell = biModelInfoCell;
+        if ([biModelInfoCell.nameLabel.text isEqualToString:@"设置"]) {
+            
+            FNHomeSettingViewController *homeSettingVC = [[FNHomeSettingViewController alloc] initWithViewControllerStyle:FNHomeSettingViewControllerStyleManagement];
+            homeSettingVC.hidesBottomBarWhenPushed = YES;
+            
+            biModelInfoCell.userInteractionEnabled = YES;
+            [self.navigationController pushViewController:homeSettingVC animated:YES];
+            
+            //            self.didSelectedIndexPath = nil;
+            
+        }else
+        {
+            FNStoreManagementInfoModel *biModel =  self.homeVM.modelInfoArray[indexPath.item];
+            
+            FNGetPermissionInfoModel *permissionInfoModel = [[FNGetPermissionInfoModel alloc] init];
+            permissionInfoModel.code = biModel.code;
+            permissionInfoModel.name = biModel.name;
+            
+            
+            
+            FNHomeNoPermissionViewController *noPermissionVC = [[FNHomeNoPermissionViewController alloc] init];
+            noPermissionVC.title = biModel.name;
+            noPermissionVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:noPermissionVC animated:YES];
+            //                    [weakSelf startProgressText:@"对不起，获取功能使用权限失败" delay:1];
+            //                weakSelf.didSelectedIndexPath = nil;
+            
+            //            biModelInfoCell.userInteractionEnabled = YES;
+            
+        }
+        
+    }
 
+}
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
@@ -1015,47 +1021,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     model.name = biModel.name;
     
     saveModel.datalist = @[model];
-    
-    WS(weakSelf);
-    __weak __typeof(FNStoreBiInfoCollectionViewCell *)weakCell = cell;
-    __weak __typeof(NSIndexPath *)weakIndexPath = indexPath;
 
-//    [self.server requestSaveBiSettingWithParameterModel:saveModel success:^(id responseModel, BOOL isCache) {
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-////            NSTimeInterval begin, end;
-////            
-////            begin = CACurrentMediaTime();
-//            
-//            
-//            [weakSelf.homeVM.biInfoArray removeObjectAtIndex:weakIndexPath.row];
-////            weakCell.iconView.enabled = YES;
-//            [weakCell setHidenIcon:YES];
-//            [weakSelf.mainView deleteItemsAtIndexPaths:@[weakIndexPath]];
-//            [weakSelf cancelTap];
-//            [weakSelf addLineToSuperView:weakSelf.mainView withArray:[weakSelf.homeVM.biInfoArray copy]];
-////            weakSelf.mainView.userInteractionEnabled = YES;
-////            end = CACurrentMediaTime();
-////            printf("time%10.8f   ", (end - begin) );
-//        });
-//        
-//        
-//    } failure:^(FNBaseResponseModel *responseModel, NSError *error) {
-//        
-////        weakCell.iconView.enabled = YES;
-//        if (responseModel&&[responseModel.errorCode integerValue] ==1000) {
-//            [weakSelf startProgressText:responseModel.errorDesc delay:1];
-//        }
-//        if (error) {
-//            if ((error.code == FNNoNetworkConnectError)||(error.code == FNServerUnReachabilityError)) {
-//                [weakSelf startProgressText:[error.userInfo objectForKey:@"NSLocalizedDescription"] delay:1];
-//            }
-//            
-//            
-//        }
-//        
-//    }];
-//    
 }
 
 #pragma mark -FNStoreManagementInfoCollectionViewCellDelegate
@@ -1117,16 +1083,16 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 
 -(void)managementInfoCellClicked:(FNStoreManagementInfoCollectionViewCell *)cell
 {
-    NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
-    [self collectionView:self.mainView clickedItemAtIndexPath:indexPath];
+//    NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
+//    [self collectionView:self.mainView clickedItemAtIndexPath:indexPath];
 }
 
 #pragma mark - FNStoreAddBiInfoCollectionViewCellDelegate
 
 -(void)biInfoCellClicked:(FNStoreAddBiInfoCollectionViewCell *)cell
 {
-    NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
-    [self collectionView:self.mainView clickedItemAtIndexPath:indexPath];
+//    NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
+//    [self collectionView:self.mainView clickedItemAtIndexPath:indexPath];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -1143,25 +1109,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     return NO;
 }
 
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-//{
-//    // 输出点击的view的类名
-//    //    DLog(@"%@", NSStringFromClass([touch.view class]));
-//
-//    
-//    // 若为UICollectionViewCellContentView（即点击了UICollectionViewCell），则不截获Touch事件
-//    if ([gestureRecognizer.view isKindOfClass:[FNMCollectionView class]]) {
-//        if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
-//            return YES;
-//        }else
-//        {
-//            return NO;
-//        }
-//        
-//    }
-//    
-//    return  YES;
-//}
 
 #pragma mark - UINavigationControllerDelegate
 
@@ -1211,10 +1158,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         
         //向上滚动的条件与向下滚动的条件
         if (((point.y <= 70.0)&&(mainViewPoint.y  > 0)&&(scrollerValue<0))||((point.y + self.selectedBiInfoCell.frame.size.height/2 >= kScreenHeight - 46.0)&&(mainViewPoint.y  + self.mainView.bounds.size.height<=self.mainView.contentSize.height )&&(scrollerValue>0)&&(mainViewPoint.y  >=0)&&(self.mainView.contentOffset.y  + self.mainView.bounds.size.height <=self.mainView.contentSize.height))) {
-            
-//            if (scrollerValue >self.mainView.bounds.size.height ) {
-//                return;
-//            }
             
             CGPoint  viewPoint = CGPointMake(mainViewPoint.x, mainViewPoint.y + scrollerValue);
             self.mainView.contentOffset = viewPoint;
