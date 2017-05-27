@@ -11,6 +11,7 @@
 #import "SYLTabBar.h"
 #import "SYLTabBarButton.h"
 #import "UIView+Additions.h"
+#import "SYLSecondHomePageViewController.h"
 @interface SYLTabBarViewController ()<SYLTabBarDelegate>
 
 @property (nonatomic,strong) NSArray *imageNameArr;
@@ -62,7 +63,7 @@
     UINavigationController  *homeNC = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
     //通知
-    SYLHomePageViewController   *fcVC   = [[SYLHomePageViewController alloc] init];
+    SYLSecondHomePageViewController   *fcVC   = [[SYLSecondHomePageViewController alloc] init];
     UINavigationController  *vcNC   = [[UINavigationController alloc] initWithRootViewController:fcVC];
     
     

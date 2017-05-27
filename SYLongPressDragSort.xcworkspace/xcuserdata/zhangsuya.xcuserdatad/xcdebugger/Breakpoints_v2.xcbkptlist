@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SYLongPressDragSort/Home/ViewControllers/SYLHomePageViewController.m"
-            timestampString = "516878604.994952"
+            filePath = "SYLongPressDragSort/Home/ViewControllers/SYLSecondHomePageViewController.m"
+            timestampString = "517477521.180934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "924"
-            endingLineNumber = "924"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
+            landmarkName = "-collectionView:clickedItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SYLongPressDragSort/Home/Views/FNStoreManagementInfoCollectionViewCell.m"
-            timestampString = "516882637.097069"
+            filePath = "SYLongPressDragSort/Home/ViewControllers/SYLSecondHomePageViewController.m"
+            timestampString = "517478625.855265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "914"
+            endingLineNumber = "914"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
