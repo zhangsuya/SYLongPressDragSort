@@ -479,16 +479,15 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
             }
         }
         
-        WS(weakSelf);
         [UIView animateWithDuration:0.4 animations:^{
             
-            weakSelf.selectedBiInfoCell.transform = CGAffineTransformIdentity;
-            weakSelf.selectedBiInfoCell.center = [mainView layoutAttributesForItemAtIndexPath:weakSelf.finalToIndexPath].center;
+            self.selectedBiInfoCell.transform = CGAffineTransformIdentity;
+            self.selectedBiInfoCell.center = [mainView layoutAttributesForItemAtIndexPath:self.finalToIndexPath].center;
             
         } completion:^(BOOL finished) {
             
             
-            if (!weakSelf.isChanged) {
+            if (!self.isChanged) {
                 
                 if (self.selectedIndexPath.section == 2) {
                     
@@ -497,13 +496,13 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
                 
             }else
             {
-                [weakSelf.selectedBiInfoCell setHidenIcon:YES];
-                weakSelf.selectedBiInfoCell = nil;
+                [self.selectedBiInfoCell setHidenIcon:YES];
+                self.selectedBiInfoCell = nil;
                 
                 //保存排序信息到服务器
-                [weakSelf saveSortInfoBySection:self.selectedIndexPath.section];
-                weakSelf.selectedIndexPath = nil;
-                weakSelf.finalToIndexPath = nil;
+                [self saveSortInfoBySection:self.selectedIndexPath.section];
+                self.selectedIndexPath = nil;
+                self.finalToIndexPath = nil;
             }
             
             
@@ -514,80 +513,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
 }
 
 
--(void)collectionView:(UICollectionView *)collectionView clickedItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //如果当前有长按选中的item，则把长按选中的item设为nil，并且不跳转
-    if (self.selectedBiInfoCell) {
-        [self.selectedBiInfoCell setHidenIcon:YES];
-        self.selectedBiInfoCell = nil;
-        self.selectedIndexPath = nil;
-        self.finalToIndexPath = nil;
-        return;
-    }
-    //如果一个item被点击了，（在这个item跳转之前）不能同时点击第二个。
-    if (self.didSelectedIndexPath) {
-        //        self.didSelectedIndexPath = nil;
-        return;
-    }
-    
-    if (indexPath.section ==0) {
-        
-        
-        if (indexPath.item == [self.homeVM.biInfoArray count]) {
-            
-            self.didSelectedIndexPath = indexPath;
-            
-            FNHomeSettingViewController *homeSettingVC = [[FNHomeSettingViewController alloc] initWithViewControllerStyle:FNHomeSettingViewControllerStyleBi];
-            homeSettingVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:homeSettingVC animated:YES];
-            //            self.didSelectedIndexPath = nil;
-            
-        }else
-        {
-            
-        }
-        
-    }else if (indexPath.section ==2)
-    {
-        self.didSelectedIndexPath = indexPath;
-        FNStoreManagementInfoCollectionViewCell *biModelInfoCell =(FNStoreManagementInfoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-        
-        biModelInfoCell.userInteractionEnabled = NO;
-        
-        __weak typeof(FNStoreManagementInfoCollectionViewCell *) weakBiModelInfoCell = biModelInfoCell;
-        if ([biModelInfoCell.nameLabel.text isEqualToString:@"设置"]) {
-            
-            FNHomeSettingViewController *homeSettingVC = [[FNHomeSettingViewController alloc] initWithViewControllerStyle:FNHomeSettingViewControllerStyleManagement];
-            homeSettingVC.hidesBottomBarWhenPushed = YES;
-            
-            biModelInfoCell.userInteractionEnabled = YES;
-            [self.navigationController pushViewController:homeSettingVC animated:YES];
-            
-            //            self.didSelectedIndexPath = nil;
-            
-        }else
-        {
-            FNStoreManagementInfoModel *biModel =  self.homeVM.modelInfoArray[indexPath.item];
-            
-            FNGetPermissionInfoModel *permissionInfoModel = [[FNGetPermissionInfoModel alloc] init];
-            permissionInfoModel.code = biModel.code;
-            permissionInfoModel.name = biModel.name;
-            
-            
-            
-            FNHomeNoPermissionViewController *noPermissionVC = [[FNHomeNoPermissionViewController alloc] init];
-            noPermissionVC.title = biModel.name;
-            noPermissionVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:noPermissionVC animated:YES];
-            //                    [weakSelf startProgressText:@"对不起，获取功能使用权限失败" delay:1];
-            //                weakSelf.didSelectedIndexPath = nil;
-            
-            //            biModelInfoCell.userInteractionEnabled = YES;
-            
-        }
-        
-    }
-}
+
 
 -(void)addLineToSuperView:(UICollectionView *)mainView withArray:(NSArray *)dataArray{
     

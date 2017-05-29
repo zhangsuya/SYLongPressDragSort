@@ -35,7 +35,24 @@
 #define DLog(...)
 #endif
 
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+
+#ifndef strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+#endif
+;
 //** #define FNDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 //** #define IS_iPad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 //** #define kColorWithRGB(r, g, b) [UIColor colorWithRed:(r) / 255.f green:(g) / 255.f blue:(b) / 255.f alpha:1.f]

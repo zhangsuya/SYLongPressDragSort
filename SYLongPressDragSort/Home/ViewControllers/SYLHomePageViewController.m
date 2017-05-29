@@ -3,7 +3,7 @@
 //  FNMerchant
 //
 //  Created by 张苏亚 on 16/6/17.
-//  Copyright © 2016年 FeiNiu. All rights reserved.
+//  Copyright © 2016年 suya. All rights reserved.
 //
 
 #import "SYLHomePageViewController.h"
@@ -29,11 +29,7 @@
 #import "FNHomeNoPermissionViewController.h"
 #import "NSData+Add.h"
 #import "FNMCollectionView.h"
-//#import "UIScrollView+UITouch.h"
-//#import "FNMyAccountSettingViewController.h"
-//#import "FNNetWorkCache.h"
-//#import "FNEnvironmentConfigure.h"
-//@class FNMyAccountSettingViewController;
+
 
 static NSString *biInfoCollectionCell = @"biInfoCell";
 static NSString *biModelInfoCollectionCell = @"biModelInfoCell";
@@ -94,7 +90,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     self.mainView.exclusiveTouch = YES;
     self.scrollView.exclusiveTouch= YES;
     self.navigationController.delegate = self;
-    [self useCache];
 }
 
 -(instancetype)init
@@ -154,9 +149,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     if (!_navigatioBar) {
         _navigatioBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 90)];
         _navigatioBar.tag = 100001;
-//        _navigatioBar.tintColor = [UIColor fn_color:FNColor_main_color];
-//        _navigatioBar.barTintColor = [UIColor fn_color:FNColor_main_color];
-//        [_navigatioBar setBackgroundColor:[UIColor fn_color:FNColor_main_color]];
+
 //        
         UIImageView *outerStoreImageView = [[UIImageView alloc] initWithFrame:CGRectMake(12, 28, 54, 54)];
         [outerStoreImageView setImage:[UIImage imageNamed:@"iconfeiniu_bg"]];
@@ -167,9 +160,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         storeImageView.layer.masksToBounds = YES;
         storeImageView.layer.cornerRadius = 50/2;
         //没有这个色，再调
-//        storeImageView.layer.borderColor = [UIColor fn_color:FNColor_background_color].CGColor;
-//        storeImageView.layer.borderWidth = 4;
-//        [storeImageView setImage:[UIImage imageNamed:@"icon_feiniu"]];
+
         [storeImageView sd_setImageWithURL:[NSURL URLWithString:self.homeVM.store.iconImageUrl] placeholderImage:[UIImage imageNamed:@"icon_feiniu"]];
         [outerStoreImageView addSubview:storeImageView];
         [_navigatioBar addSubview:outerStoreImageView];
@@ -177,7 +168,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         
         UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(12 + 54 + 7.5f, 28  , kScreenWidth -(12 + 54 + 7.5f) , 54)];
         [nameLabel setFont: [UIFont systemFontOfSize:14]];
-//        [nameLabel setTextColor:[UIColor fn_color:FNColor_white]];
         [nameLabel setText:self.homeVM.store.shopName];
         nameLabel.numberOfLines = 1;
         [nameLabel setTextAlignment:NSTextAlignmentLeft];
@@ -185,7 +175,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelTap)];
         tap.cancelsTouchesInView = NO;
-//        tap.delegate = self;
         [_navigatioBar addGestureRecognizer:tap];
         _nameLabel = nameLabel;
 
@@ -193,17 +182,6 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     
     return _navigatioBar;
 }
-
-//-(FNHomeService *)server
-//{
-//    if (!_server) {
-//        _server = [[FNHomeService alloc] init];
-//    }
-//    return _server;
-//}
-
-
-
 
 -(UICollectionView *)mainView
 {
@@ -261,11 +239,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     return _scrollView;
 }
 #pragma mark - Private
--(void)useCache
-{
 
-
-}
 -(void)setUpNotification
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(biSettingVisibleChange:) name:FNBiSettingVisibleChange object:nil];
@@ -355,9 +329,7 @@ static NSString *biAddInfoCollectionCell = @"biAddInfoCell";
     [self.view addSubview:self.scrollView];
     [self.view bringSubviewToFront:self.scrollView];
     
-//    _mainViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelTap)];
-//    _mainViewTap.delegate = self;
-//    [self.mainView addGestureRecognizer:_mainViewTap];
+
 }
 
 -(void)initNavigationInfo

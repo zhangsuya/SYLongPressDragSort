@@ -3,7 +3,7 @@
 //  FNMerchant
 //
 //  Created by 张苏亚 on 16/8/31.
-//  Copyright © 2016年 FeiNiu. All rights reserved.
+//  Copyright © 2016年 suya. All rights reserved.
 //
 
 #import "FNHomeSettingTableViewCell.h"
