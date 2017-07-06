@@ -74,7 +74,7 @@
 {
     _modelInfoModel = modelInfoModel;
     if (modelInfoModel.iconImageUrl) {
-        [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:modelInfoModel.iconImageUrl]];
+        [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:modelInfoModel.iconImageUrl] placeholderImage:[UIImage imageNamed:@"icon_comment"]];
     }else
     {
         [self.iconImageView setImage:[UIImage imageNamed:modelInfoModel.url]];
