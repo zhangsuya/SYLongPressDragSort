@@ -1,6 +1,6 @@
 //
-//  MDStoreAddBiInfoCollectionViewCell.h
-//  MarkDemo
+//  FNStoreAddBiInfoCollectionViewCell.h
+//  SYLongPressDragSort
 //
 //  Created by 张苏亚 on 16/6/15.
 //  Copyright © 2016年 张苏亚. All rights reserved.
